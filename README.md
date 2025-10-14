@@ -8,7 +8,7 @@
 
 <ul>
 	<li><a href='https://github.com/adotejb/297-portfolio'>Github Pages Homework</a></li>
-	<li> </li>
+	<li><a href='https://github.com/adotejb/297-portfolio/tree/main/CRUD_hw'>CRUD Assignment</a></li>
   <li> </li>
   <li> </li>
 </ul>
