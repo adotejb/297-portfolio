@@ -1,4 +1,4 @@
-var myMedicationList = []; // An array of texts of the drugs on the medication list
+var myMedicationList = []; 
 
 var add_button = document.querySelector("#add_button");
 add_button.addEventListener("click", addDrugToMyList);
@@ -55,9 +55,12 @@ function showMedicationList() {
     );
     li.append(a);
 
+	/// copied over the same viewing process used for removals
+	/// create edit button for a drug
     let editButton = document.createElement("a");
     editButton.innerText = "[Edit]";
     editButton.href = "javascript:;";	
+	/// bind edit function to list of drugs 
     editButton.addEventListener("click", 
       editDrugInMedicationList.bind(li, myMedicationList[i], li, i)
     );
@@ -79,12 +82,14 @@ function removeDrugFromMedicationList(drug, li) {
   }
 
 }
-
+/// create function to edit drugs in the medication list
 function editDrugInMedicationList(drug, li, index) {
+	/// ask the user to update the current value
     let newDrug = prompt("Edit Medication", drug);
-    if (newDrug.trim()) {
-      myMedicationList[index] = newDrug.trim();
+	/// if something is entered add the entry to the specific index of the array
+    if (newDrug) {
+      myMedicationList[index] = newDrug;
+		/// show the updated name of the drug
       showMedicationList();
     }
-
 }
