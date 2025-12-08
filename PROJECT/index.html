@@ -1,0 +1,62 @@
+
+<html> 
+<head>
+    <title>"Pharmacy Sales Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+  
+<body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<h1>Pharmacy Sales Tracker (2020-2025)</h1>
+<p>Click on each medication to enter and view sales data</p>
+
+<div class="medication-section">
+    <div class="med-header" onclick="toggleMed('med1')">
+        <span id="med1-title">Loading...</span> ▼
+    </div>
+    <div class="med-content" id="med1-content">
+        <h3>Enter Sales Data (Units Sold):</h3>
+        
+        <label>2020:</label><input type="number" id="med1-2020" placeholder="0"><br>
+        <label>2021:</label><input type="number" id="med1-2021" placeholder="0"><br>
+        <label>2022:</label><input type="number" id="med1-2022" placeholder="0"><br>
+        <label>2023:</label><input type="number" id="med1-2023" placeholder="0"><br>
+        <label>2024:</label><input type="number" id="med1-2024" placeholder="0"><br>
+        <label>2025:</label><input type="number" id="med1-2025" placeholder="0"><br>
+        
+        <button onclick="showTable('med1')">View Table</button>
+        
+        <div id="med1-table"></div>
+        <div id="med1-chart" style="width:100%; height:400px;"></div>
+    </div>
+</div>
+
+<!-- Medication 2 -->
+<div class="medication-section">
+    <div class="med-header" onclick="toggleMed('med2')">
+        <span id="med2-title">Loading...</span> ▼
+    </div>
+    <div class="med-content" id="med2-content">
+        <h3>Enter Sales Data (Units Sold):</h3>
+        
+        <label>2020:</label><input type="number" id="med2-2020" placeholder="0"><br>
+        <label>2021:</label><input type="number" id="med2-2021" placeholder="0"><br>
+        <label>2022:</label><input type="number" id="med2-2022" placeholder="0"><br>
+        <label>2023:</label><input type="number" id="med2-2023" placeholder="0"><br>
+        <label>2024:</label><input type="number" id="med2-2024" placeholder="0"><br>
+        <label>2025:</label><input type="number" id="med2-2025" placeholder="0"><br>
+        
+        <button onclick="showTable('med2')">View Table</button>
+        
+        <div id="med2-table"></div>
+         <div id="med2-chart" style="width:100%; height:400px;"></div>
+    </div>
+</div>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
