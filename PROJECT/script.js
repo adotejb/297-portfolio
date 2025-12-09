@@ -35,7 +35,8 @@ $.get("https://r3.smarthealthit.org/MedicationRequest?_format=json&_count=100", 
     document.getElementById("med2-title").innerHTML = med2;
 });
 
-/// Used AI to help me set this up for fluidity of the page
+/* Used AI to help me set this up for fluidity of the page. This will allow the user to hide 
+information for one medication while they work on another. */
 function toggleMed(medId) {
     var content = document.getElementById(medId + "-content");
     
@@ -46,6 +47,7 @@ function toggleMed(medId) {
     }
 }
 
+/// Next, a function to show a table containing the entered data
 function showTable(medId) {
     // Get values directly from input fields
     var data2020 = document.getElementById(medId + "-2020").value || 0;
@@ -64,7 +66,8 @@ function showTable(medId) {
     tableHTML += "<tr><td>2023</td><td>" + data2023 + "</td></tr>";
     tableHTML += "<tr><td>2024</td><td>" + data2024 + "</td></tr>";
     tableHTML += "<tr><td>2025</td><td>" + data2025 + "</td></tr>";
-    
+
+    /// Allow the user to see the total of their up
     var total = parseInt(data2020) + parseInt(data2021) + parseInt(data2022) + 
                 parseInt(data2023) + parseInt(data2024) + parseInt(data2025);
     
